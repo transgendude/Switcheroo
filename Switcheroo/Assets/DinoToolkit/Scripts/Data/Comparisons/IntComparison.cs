@@ -1,9 +1,9 @@
 ﻿// -----------------------------------------------------------------------------
-#region File Info - UITextAction.cs
+#region File Info - IntComparison.cs
 // -----------------------------------------------------------------------------
 // Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
-// Purpose:     Controls text in the UI
+// Purpose:     Compares two integers and performs actions accordingly
 // -----------------------------------------------------------------------------
 #endregion
 // -----------------------------------------------------------------------------
@@ -13,94 +13,114 @@
 #region Libraries
 // -----------------------------------------------------------------------------
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #endregion
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-#region Component: UITextAction
+#region Component: IntComparison
 // -----------------------------------------------------------------------------
-[RequireComponent(typeof(Text))]
-[AddComponentMenu("Dino Toolkit/Actions/UITextAction")]
-[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/UITextAction")]
-public class UITextAction : MonoBehaviour
+[AddComponentMenu("Dino Toolkit/Comparisons/IntComparison")]
+[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/IntComparison")]
+public class IntComparison : MonoBehaviour
 {
     // -------------------------------------------------------------------------
-    #region Editor Variables
+    #region Enum: StandardType
     // -------------------------------------------------------------------------
-    [Tooltip("Should we limit the display of decimals for float values?")]
-    public bool limitFloatDecimals = false;
-    [Tooltip("Float values will only display this many decimal places")]
-    [ShowInInspectorIf("limitFloatDecimals")]
-    public int numDecimals = 0;
+    public enum StandardType
+    {
+        DATA,
+        RAW
+    }
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
 
+
+
     // -------------------------------------------------------------------------
-    #region Internal Variables
+    #region Editor Variables
     // -------------------------------------------------------------------------
-    private Text textObject = null;
+
+    // -------------------------------------------------------------------------
+    [Header("Settings")]
+    // -------------------------------------------------------------------------
+
+    [Tooltip("Should our standard value be a Data component, or a raw integer?")]
+    public StandardType standardType = StandardType.DATA;
+    [Tooltip("The standard IntData value that we'll be comparing to")]
+    [ShowOnEnum("standardType", (int)StandardType.DATA)]
+    public IntData standardData = null;
+    [Tooltip("The standard integer value that we'll be comparing to")]
+    [ShowOnEnum("standardType", (int)StandardType.RAW)]
+    public int standardRaw = 0;
+
+    // -------------------------------------------------------------------------
+    [Header("Activation Lists")]
+    // -------------------------------------------------------------------------
+
+    [Tooltip("Perform these actions when the target value is less than the standard value.")]
+    public UnityEvent onLessThan;
+    [Tooltip("Perform these actions when the target value is equal to the standard value.")]
+    public UnityEvent onEqualTo;
+    [Tooltip("Perform these actions when the target value is greater than the standard value.")]
+    public UnityEvent onGreaterThan;
+
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
+
 
 
     // -------------------------------------------------------------------------
     #region Internal Functions
     // -------------------------------------------------------------------------
-    private Text GetTextObject()
+    private int GetStandard()
     {
-        if (textObject == null)
-            // Get and store our text object for later use
-            textObject = GetComponent<Text>();
-
-        // return the cached text object
-        return textObject;
+        if (standardType == StandardType.DATA)
+        {
+            return standardData.GetCurrentValue();
+        }
+        else
+        {
+            return standardRaw;
+        }
     }
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
+
 
 
     // -------------------------------------------------------------------------
     #region Action Functions
     // -------------------------------------------------------------------------
-    public void ActionSetTextString(string newText)
+    public void ActionCompareToTarget(int value)
     {
-        // Set the text object to use our new string
-        GetTextObject().text = newText;
+        // Compare the supplied value to our standard value
+
+        // Check less than
+        if (value < GetStandard())
+            onLessThan.Invoke();
+
+        // Check equal to
+        else if (value == GetStandard())
+            onEqualTo.Invoke();
+
+        // Check greater than
+        else if (value > GetStandard())
+            onGreaterThan.Invoke();
     }
     // -------------------------------------------------------------------------
-    public void ActionSetTextInt(int newText)
+    public void ActionCompareToTarget(IntData value)
     {
-        // Convert the int to a string using the default method
-        GetTextObject().text = newText.ToString();
-    }
-    // -------------------------------------------------------------------------
-    public void ActionSetTextFloat(float newText)
-    {
-        // Check if we should limit the float's decimal places...
-        if (limitFloatDecimals)
-        {
-            // We should limit them!
-            // Convert the float to a string using a special formatting method
-            GetTextObject().text = newText.ToString("F" + numDecimals);
-        }
-        else
-        {
-            // We should not limit them
-            // Convert the float to a string using the default method
-            GetTextObject().text = newText.ToString();
-        }
+        ActionCompareToTarget(value.GetCurrentValue());
     }
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
-
-
 }
 // -----------------------------------------------------------------------------
 #endregion

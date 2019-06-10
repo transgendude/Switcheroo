@@ -411,7 +411,7 @@ ParentConstraint:
   m_IsContraintActive: 1
   m_IsLocked: 0
   m_Sources:
-  - sourceTransform: {fileID: 0}
+  - sourceTransform: {fileID: 1238481581}
     weight: 1
 --- !u!81 &256928118
 AudioListener:
@@ -519,6 +519,16 @@ Prefab:
     - target: {fileID: 1548252858563608, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
       propertyPath: m_Name
       value: Gem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
@@ -641,6 +651,16 @@ Prefab:
       propertyPath: m_Name
       value: Gem (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
   m_IsPrefabAsset: 0
@@ -686,6 +706,16 @@ Prefab:
     - target: {fileID: 1548252858563608, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
       propertyPath: m_Name
       value: Gem (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
@@ -18153,15 +18183,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 21, y: 5, z: 0}
-    second:
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 22, y: 5, z: 0}
     second:
       m_TileIndex: 6
@@ -28310,7 +28331,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: 96d48fb68870c7346884941f1cb9e7ee, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: d2f60a43ddabc87468be781b5d9e58d3, type: 2}
   - m_RefCount: 2932
     m_Data: {fileID: 11400000, guid: c3b356946ee74fa498ce3aeb69ec2335, type: 2}
@@ -28329,14 +28350,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 19
     m_Data: {fileID: 21300076, guid: 3a8ccc668269f754ea8f5c8f374dfcad, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 21300072, guid: 3a8ccc668269f754ea8f5c8f374dfcad, type: 3}
   - m_RefCount: 2932
     m_Data: {fileID: 21300030, guid: 3a8ccc668269f754ea8f5c8f374dfcad, type: 3}
   - m_RefCount: 53
     m_Data: {fileID: 21300024, guid: 3a8ccc668269f754ea8f5c8f374dfcad, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3019
+  - m_RefCount: 3018
     m_Data:
       e00: 1
       e01: 0
@@ -28355,7 +28376,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3019
+  - m_RefCount: 3018
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -29196,6 +29217,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1238481581 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4215396969996370, guid: 5ec91f2cde55e4142b85c058ab5fd322,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421560202}
 --- !u!1001 &1421560202
 Prefab:
   m_ObjectHideFlags: 0
@@ -29442,6 +29468,16 @@ Prefab:
       propertyPath: m_Name
       value: Gem (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
   m_IsPrefabAsset: 0
@@ -29488,6 +29524,16 @@ Prefab:
       propertyPath: m_Name
       value: Gem (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
   m_IsPrefabAsset: 0
@@ -29500,11 +29546,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4036421273846716, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26.175167
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 4036421273846716, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.557334
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4036421273846716, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -29530,6 +29576,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
   m_IsPrefabAsset: 0
@@ -29850,7 +29901,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1880011467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 122.75, y: -2.27, z: 0}
+  m_LocalPosition: {x: 0.63, y: -1.33, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29974,6 +30025,16 @@ Prefab:
       propertyPath: m_Name
       value: Gem (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
   m_IsPrefabAsset: 0
@@ -30019,6 +30080,16 @@ Prefab:
     - target: {fileID: 1548252858563608, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}
       propertyPath: m_Name
       value: Gem (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1110814910}
+    - target: {fileID: 114460638976945042, guid: d4f46b5d446121e49bd334175c7ef69f,
+        type: 2}
+      propertyPath: onTriggerEnterActions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActionAddValue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f46b5d446121e49bd334175c7ef69f, type: 2}

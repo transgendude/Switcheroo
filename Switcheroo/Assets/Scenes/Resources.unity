@@ -265,7 +265,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -316,8 +316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.1, y: -17}
-  m_SizeDelta: {x: 1166.3, y: 596.3}
+  m_AnchoredPosition: {x: -51.7, y: 1.4}
+  m_SizeDelta: {x: 1073.2, y: 588.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360357756
 MonoBehaviour:
@@ -351,40 +351,35 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1. Make your home wildlife-friendly by simply securing rubbish in bins
-    with locking lids, feeding your pets indoors, and locking pet doors at night to
-    avoid attracting wild creatures into your home.\r\n\r\n2. Clean up the space around
-    you, because litter is not only an eyesore, but it\u2019s also a detriment to
-    the wellbeing of wildlife. Litter can pose choking hazards and cause ecosystem
-    pollution, while plastics and chemicals from our waste can be dangerous to wildlife
-    in various ways.\r\n\r\n3. Plant native plants in your garden or on any land you
-    own to provide food and shelter for native wildlife, and to help preserve their
-    natural habitats. Native plants can also attract native insects like bees and
-    butterflies that help pollinate your plants.\r\n\r\n4. Avoid using herbicides
-    and pesticides when planting. Although these chemicals are effective in protecting
-    your plants from pests, they are also capable of doing huge amounts of damage
-    to the ecosystem. Not to mention that these hazardous pollutants take a long time
-    to degrade, and they build up in the soils and can be distributed throughout the
-    food chain.\r\n\n5. Slow down when driving in order to avoid collisions with any
-    creatures that happen to cross the road. Be sure to keep a wary eye out for creatures
-    whose habitats have been divided by roads, especially in developed areas.\r\n\r\n6.
-    Recycle to minimise your use of non-renewable resources and make the most out
-    of available materials. This is not only easy on the environment but also helps
-    the economy too, so there\u2019s really no reason why we shouldn\u2019t recycle
-    more.\r\n\r\n7. Buy sustainable products, including agricultural produces that
-    don\u2019t harm the environment, and furniture made from sustainably sourced and
-    manufactured timber rather than wood from rainforests.\r\n\r\n8. Minimise your
-    use of palm oil, because rainforests where tigers, orangutans, and many other
-    native species live are being deforested to make way for palm plantations.\r\n\r\n9.
+  m_Text: "1. Make your home wildlife-friendly by securing rubbish in bins with locking
+    lids, feeding pets indoors, and locking pet doors at night to avoid attracting
+    wildlife into your home.\r\n\r\n2. Clean up the space around you, because litter
+    is not only an eyesore, but it\u2019s also a detriment to the wellbeing of wildlife.
+    Litter can pose choking hazards and cause ecosystem pollution, while plastics
+    and chemicals from our waste can be dangerous to wildlife.\r\n\r\n3. Plant native
+    plants in your garden or on any land you own to provide food and shelter for native
+    wildlife, and to help preserve their natural habitats. Native plants can also
+    attract native insects like bees and butterflies that pollinate your plants.\r\n\r\n4.
+    Avoid using herbicides and pesticides when planting. Although these chemicals
+    are effective in protecting your plants from pests, they are also capable of doing
+    huge amounts of damage to the ecosystem. Not to mention that these hazardous pollutants
+    take a long time to degrade, and they build up in the soils and can be distributed
+    throughout the food chain.\r\n\n5. Slow down when driving in order to avoid collisions
+    with any creatures that happen to cross the road. Be sure to keep a wary eye out
+    for creatures whose habitats have been divided by roads, especially in developed
+    areas.\r\n\r\n6. Recycle to minimise your use of non-renewable resources and make
+    the most out of available materials.\n\r\n7. Buy sustainable products, including
+    agricultural produces that don\u2019t harm the environment, and furniture made
+    from sustainably sourced and manufactured timber rather than wood from rainforests.\r\n\r\n8.
+    Minimise your use of palm oil, because rainforests where tigers, orangutans, and
+    many other native species live are being deforested to make way for palm plantations.\r\n\r\n9.
     Protect wildlife habitats so that the animals have places to find food, seek shelter,
-    and raise their young \u2013 because the widespread destruction of natural habitats
-    is perhaps the greatest threat that many species are facing these days.\r\n\r\n10.
-    Visit zoos, aquariums, national parks, and wildlife refuges that many wild animals
-    call home.\r\n\r\n11. Learn about endangered species in your area. Teach the people
-    around you \u2013 whether it\u2019s your mum, your child, your colleague, your
-    neighbour, or your hairdresser \u2013 about the wonderful wildlife, birds, fish,
-    and plants that live near you and why they need protection.\r\n\r\n12. Support
-    bans on cruel sport and activities that impose unnecessary stress on animals,
+    and raise their young.\n\r\n10. Visit zoos, aquariums, national parks, and wildlife
+    refuges that many wild animals call home.\r\n\r\n11. Learn about endangered species
+    in your area. Teach the people around you \u2013 whether it\u2019s your mum, your
+    child, your colleague, your neighbour, or your hairdresser \u2013 about the wonderful
+    wildlife, birds, fish, and plants that live near you and why they need protection.\r\n\r\n12.
+    Support bans on cruel sport and activities that impose unnecessary stress on animals,
     some of which can be lethal.\n"
 --- !u!222 &360357757
 CanvasRenderer:
